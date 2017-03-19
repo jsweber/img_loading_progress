@@ -1,0 +1,2 @@
+# img_loading_progress
+用于监听图片加载进度的插件，轻量级适合loading页
