@@ -1,5 +1,7 @@
 # img_loading_progress
 用于监听图片加载进度的插件，适用于loading页显示图片加载进度这个场景。轻量min只有3kb
+安装：
+支持 通过script标签引入，es6 import ，commonjs，amd，cmd
 
 开始使用：
 new ILoading(element_name);  //传入包裹图片元素的id,classname，注意元素标识唯一
