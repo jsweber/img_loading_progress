@@ -29,7 +29,10 @@
     "url": "git+ssh://git@github.com/jsweber/img_loading_progress.git"
   },
   "keywords": [
+    "javascript",
+    "html5",
     "image",
+    "image loading",
     "loading",
     "loading page"
   ],
