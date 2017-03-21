@@ -41,12 +41,16 @@ class ILoading{
     /*有时图片加载的太快，我们看不到弱网状态下的loading页效果，这时就需要用这个函数了，可以设置每隔多久请求一张图片。
         new ILoading(dom).loadingProcessMock((count,sum)=>{  //count: how many images has loaded , sum: the sum of the image need load.    },time count by milliosection)
     */
-    loadingProcessMock(cb,mil){
+    loadingProcessMock(cb,mil=1000){
         let sum = this.allImgs.length;
         let self = this;
         let count = 0;
         let index = 0;
-        let interval = mil || 200;
+        let interval = mil;
+
+        if(typeof cb !== "function"){
+            console.error("the first param must function");
+        }
         if(!this.allImgs || sum === 0){
             console.error("ImgLoading don not get imgs!");
         }

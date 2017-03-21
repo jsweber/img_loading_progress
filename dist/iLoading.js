@@ -138,12 +138,18 @@ var ILoading = function () {
 
     }, {
         key: "loadingProcessMock",
-        value: function loadingProcessMock(cb, mil) {
+        value: function loadingProcessMock(cb) {
+            var mil = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+
             var sum = this.allImgs.length;
             var self = this;
             var count = 0;
             var index = 0;
-            var interval = mil || 200;
+            var interval = mil;
+
+            if (typeof cb !== "function") {
+                console.error("the first param must function");
+            }
             if (!this.allImgs || sum === 0) {
                 console.error("ImgLoading don not get imgs!");
             }
